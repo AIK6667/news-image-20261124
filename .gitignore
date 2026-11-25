@@ -1,0 +1,10 @@
+output/
+out/
+run1/
+run2/
+kit/
+kit.bin
+requirements.json
+*.tar.gz
+__pycache__/
+*.pyc
