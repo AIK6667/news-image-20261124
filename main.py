@@ -20,6 +20,9 @@ import zlib
 WIDTH = 1024
 HEIGHT = 1024
 
+# The day the page sums up. Nothing else on the page depends on the clock.
+DAY = "TUESDAY 24 NOVEMBER 2026"
+
 PAPER = (244, 239, 228)
 INK = (21, 22, 26)
 RED = (176, 42, 32)
@@ -299,7 +302,7 @@ def build_page(warnings=None):
     bar_height = 58
     canvas.rect(margin, bar_top, WIDTH - 2 * margin, bar_height, RED)
     date_scale = 5
-    draw_text(canvas, margin + 14, bar_top + 11, "TUESDAY 24 NOVEMBER 2026", date_scale, PAPER)
+    draw_text(canvas, margin + 14, bar_top + 11, DAY, date_scale, PAPER)
     tag = "8 STORIES"
     draw_text(canvas, WIDTH - margin - 14 - text_width(tag, 3),
               bar_top + (bar_height - GLYPH_ROWS * 3) // 2, tag, 3, PAPER)
