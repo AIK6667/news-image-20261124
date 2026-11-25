@@ -22,6 +22,18 @@ Python 3.13, standard library only. The page is written to `/output/entry.png`, 
 PNG encoder over `zlib`. The layout is laid out from constants, never measured from the clock or
 from a random source, so two runs write byte-identical files.
 
+## Test it
+
+```sh
+python3 -m unittest discover -s tests
+```
+
+The suite renders the page twice into temporary directories and holds both runs to the bounty's
+limits: the same sha256 both times, one whole PNG, 1024 by 1024 at most, under 1 MiB, every headline
+and deck inside the column the layout gives it.
+
+## The day it shows
+
 The picture carries the day and nothing else:
 
 | Story | Region | Wires |

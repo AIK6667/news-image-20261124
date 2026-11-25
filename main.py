@@ -301,11 +301,8 @@ def build_page(warnings=None):
     bar_top = 118
     bar_height = 58
     canvas.rect(margin, bar_top, WIDTH - 2 * margin, bar_height, RED)
-    date_scale = 5
-    draw_text(canvas, margin + 14, bar_top + 11, DAY, date_scale, PAPER)
-    tag = "8 STORIES"
-    draw_text(canvas, WIDTH - margin - 14 - text_width(tag, 3),
-              bar_top + (bar_height - GLYPH_ROWS * 3) // 2, tag, 3, PAPER)
+    date_scale = 6
+    draw_text(canvas, margin + 16, bar_top + 8, DAY, date_scale, PAPER)
 
     canvas.rect(margin, 190, WIDTH - 2 * margin, 6, INK)
     canvas.rect(margin, 202, WIDTH - 2 * margin, 1, RULE)
